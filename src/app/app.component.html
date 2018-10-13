@@ -1,0 +1,39 @@
+<div>
+<label>Nombre</label>
+<input type="text"
+placeholder="ingrese el Nombre"
+[(ngModel)]="name">
+</div>
+{{name}}
+
+<div>
+  
+<label>Apellido</label>
+<input type="text"
+placeholder="ingrese el Apellido"
+[(ngModel)]="lastname">
+
+
+</div>
+{{lastname}}
+
+
+<button (click)="mostrar()">
+  Mostrar la informacion
+</button>
+
+<ng-container *ngIf="lista?.length" > 0">
+  <h3>Mi Lista</h3>
+
+  <ul>
+
+<li *ngFor="let item of lista">
+  {{item}}
+</li>
+
+  </ul>
+
+
+
+
+</ng-container>
